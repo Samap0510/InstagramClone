@@ -5,5 +5,12 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card *ngFor="let repository of repositorios">
+    <ion-card-header>
+      <ion-card-subtitle>{{repository.created_at}}</ion-card-subtitle>
+      <ion-card-title>{{repository.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{repository.full_name}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
